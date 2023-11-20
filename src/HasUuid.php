@@ -20,21 +20,20 @@ trait HasUuid
     }
 
     /**
-     * Scope  by uuid 
+     * Scope  by uuid
+     *
      * @param  string  uuid of the model.
-     * 
-    */
+     */
     public function scopeUuid($query, $uuid, $first = true)
     {
         $match = preg_match('/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/', $uuid);
 
-        if (!is_string($uuid) || $match !== 1)
-        {
+        if ( ! is_string($uuid) || $match !== 1) {
             throw (new ModelNotFoundException)->setModel(get_class($this));
         }
-    
+
         $results = $query->where($this->getTable().'.'.config('laravel-uuid.default_uuid_column'), $uuid);
-    
+
         return $first ? $results->firstOrFail() : $results;
     }
 }
