@@ -36,4 +36,9 @@ trait HasUuid
 
         return $first ? $results->firstOrFail() : $results;
     }
+
+    public function getRouteKeyName()
+    {
+        return 'uuid';
+    }
 }
