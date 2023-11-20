@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Centrex\LaravelUuid;
 
-use Illuminate\Database\Eloquent\ModelNotFoundException; 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
