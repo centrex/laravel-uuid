@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 
 trait HasUuid
 {
-    public static function bootUuidGenerator(): void
+    public static function bootHasUuid(): void
     {
         static::creating(function (Model $model) {
             if (Schema::hasColumn($model->getTable(), config('laravel-uuid.default_uuid_column'))) {
