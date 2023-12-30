@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Centrex\LaravelUuid;
 
@@ -34,7 +34,7 @@ trait HasUuid
     /** Get UUID Column Name. */
     public function getUuidColumnName(): string
     {
-        return isset($this->uuid_column) ? $this->uuid_column : 'uuid';
+        return $this->uuid_column ?? 'uuid';
     }
 
     /** Scope a query to only include popular users. */

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Centrex\LaravelUuid\Tests;
 
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Centrex\\LaravelUuid\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Centrex\\LaravelUuid\\Database\\Factories\\' . class_basename($modelName) . 'Factory',
         );
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Centrex\LaravelUuid;
 
@@ -21,7 +21,7 @@ class LaravelUuidServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('uuid.php'),
+                __DIR__ . '/../config/config.php' => config_path('uuid.php'),
             ], 'uuid-config');
 
             // Publishing the migrations.
@@ -53,7 +53,7 @@ class LaravelUuidServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-uuid');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-uuid');
 
         // Register the main class to use with the facade
         /*$this->app->singleton('uuid', function () {
