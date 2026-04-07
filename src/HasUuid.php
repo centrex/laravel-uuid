@@ -4,8 +4,7 @@ declare(strict_types = 1);
 
 namespace Centrex\LaravelUuid;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\{Builder, Model};
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
@@ -24,8 +23,6 @@ trait HasUuid
 
     /**
      * Get the route key for the model.
-     *
-     * @return string
      */
     public function getRouteKeyName(): string
     {
